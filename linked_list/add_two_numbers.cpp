@@ -1,40 +1,39 @@
-/**
- * Problem: Add Two Numbers
- * Link: https://leetcode.com/problems/add-two-numbers/
- * Difficulty: Medium
- *
- * Approach:
- * - Each linked list represents a number in reverse order (least significant digit first).
- * - Traverse both lists simultaneously, summing corresponding digits along with a carry value.
- * - Use a dummy head node to simplify list construction.
- * - At each step:
- *      sum = digit1 + digit2 + carry
- *      new digit = sum % 10
- *      carry = sum / 10
- * - Continue until both lists are exhausted, and handle any remaining carry.
- *
- * Time Complexity: O(max(n, m))
- * - We traverse each list once.
- *
- * Space Complexity: O(max(n, m))
- * - One new linked list is created to store and return the result.
- *
- * Key Concepts:
- * - Linked list traversal
- * - Carry handling (similar to elementary addition)
- * - Dummy head pattern for cleaner list construction
- *
- * Edge Cases Considered:
- * - Lists of different lengths
- * - Final carry after both lists are exhausted
- * - One or both input lists being null
- *
- * Real-World Relevance:
- * - Mirrors how low-level systems handle arithmetic on streamed or chunked data
- * - Similar logic applies in:
- *      - Big integer arithmetic (when numbers exceed native types)
- *      - Data processing pipelines handling segmented inputs
- */
+/*
+Problem: Add Two Numbers
+- Link: https://leetcode.com/problems/add-two-numbers/
+
+Approach:
+- Each linked list represents a number in reverse order (least significant digit first).
+- Traverse both lists simultaneously, summing corresponding digits along with a carry value.
+- Use a dummy head node to simplify list construction.
+- At each step:
+    sum = digit1 + digit2 + carry
+    new digit = sum % 10
+    carry = sum / 10
+- Continue until both lists are exhausted, and handle any remaining carry.
+
+Time Complexity: O(max(n, m))
+- We traverse each list once.
+
+Space Complexity: O(max(n, m))
+- One new linked list is created to store and return the result.
+
+Key Concepts:
+- Linked list traversal
+- Carry handling (similar to elementary addition)
+- Dummy head pattern for cleaner list construction
+
+Edge Cases Considered:
+- Lists of different lengths
+- Final carry after both lists are exhausted
+- One or both input lists being null
+
+Real-World Relevance:
+- Mirrors how low-level systems handle arithmetic on streamed or chunked data
+- Similar logic applies in:
+     - Big integer arithmetic (when numbers exceed native types)
+     - Data processing pipelines handling segmented inputs
+*/
 
 class Solution {
 public:
